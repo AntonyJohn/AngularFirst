@@ -13,10 +13,10 @@
         var employeeFactory = {};
 
         employeeFactory.loadAllEmployee = function ($scope) {
-           var auth = $base64.encode("alex:123456"), headers = {"Authorization": "Basic " + auth};
+           var auth = $base64.encode("antony:123456"), headers = {"Authorization": "Basic " + auth};
             $http({
                 method: "GET",
-                url: "http://localhost:80/SpringSecurityRestWS/employee/retrieveAllEmployee",
+                url: "http://localhost:8084/SpringSecurityRestWS/employee/retrieveAllEmployee",
                 headers: headers
             }).then(function mySucces(response) {
                 employee = response.data;                  
